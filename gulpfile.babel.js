@@ -36,7 +36,9 @@ const paths = {
             "./app/index.html",
         ],
         styles: "./app/src/sass/*.scss",
+        parts: "./app/src/sass/parts/*.scss",
         scripts: "./app/src/js/**/*.js",
+        font: "./app/src/font/**",
         images: [
             "./app/src/img/**/*.{jpg,jpeg,png,gif,svg}"
         ]
@@ -45,6 +47,7 @@ const paths = {
         clean: ["./dist/*", "./dist/.*"],
         general: "./dist/",
         styles: "./dist/css/",
+        font: "./dist/font",
         scripts: "./dist/js/",
         images: "./dist/img/"
     }
@@ -55,13 +58,15 @@ export const server = () => {
         server: paths.build.general,
         port: 9000,
         tunnel: true,
-        notify: false
+        notify: false,
+        open: false
     });
 };
 
 export const watchCode = () => {
     watch(paths.src.html, html);
     watch(paths.src.styles, styles);
+    watch(paths.src.parts, styles);
     watch(paths.src.scripts, scripts);
     watch(paths.src.images, images);
 };
@@ -155,6 +160,9 @@ export const scripts = () => {
     return bundle();
 };
 
+export const fonts = () => src(paths.src.font)
+    .pipe(dest(paths.build.font));
+
 export const images = () => src(paths.src.images)
     .pipe(gulpif(production, imagemin([
         imageminGiflossy({
@@ -191,9 +199,9 @@ export const images = () => src(paths.src.images)
     }))
     .on("end", browsersync.reload);
 
-export const development = series(cleanFiles, parallel(html, styles, scripts, images),
+export const development = series(cleanFiles, parallel(html, styles, scripts, fonts, images),
     parallel(watchCode, server));
 
-export const prod = series(cleanFiles, html, styles, scripts, images);
+export const prod = series(cleanFiles, html, styles, scripts, fonts, images);
 
 export default development;

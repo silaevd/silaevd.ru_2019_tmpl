@@ -1,3 +1,30 @@
-body {
-  background: red;
+//Services
+@import 'service/reset';
+@import 'service/grid';
+@import 'service/font';
+@import 'service/colors';
+
+//FontAwesome
+$fa-font-path:   "../font/fontawesome";
+@import 'service/fontawesome/fontawesome';
+@import "service/fontawesome/regular.scss";
+@import "service/fontawesome/solid.scss";
+
+//Parts
+@import 'parts/header';
+@import 'parts/profile';
+
+* {
+  box-sizing: border-box;
 }
+
+html {
+  font-size: 16px;
+  font-family: sans-serif;
+  background: #dad8d4;
+}
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
