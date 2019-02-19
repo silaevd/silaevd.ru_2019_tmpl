@@ -3,7 +3,9 @@
   height: 80vh;
   flex-direction: column;
   justify-content: flex-end;
-  background: $primary-color-dark;
+  background: $primary-color-dark url('../img/header_bg.jpg') no-repeat;
+  //background: $primary-color-dark;
+  background-size: cover;
 }
 
 .headerIntro {

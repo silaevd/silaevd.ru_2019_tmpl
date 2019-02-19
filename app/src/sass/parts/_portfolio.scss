@@ -30,7 +30,6 @@
 .projects {
   @include row-flex();
   transition: 320ms ease-in-out;
-  //transform: rotateX(33deg) rotateZ(-31deg) rotateY(13deg) scale(0.5) translateY(-300px);
 }
 
 .project {
