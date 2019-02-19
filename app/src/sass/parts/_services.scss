@@ -1,0 +1,67 @@
+.services {
+  &__bracket {
+    color: $white;
+  }
+
+  &__title {
+    font-family: PlayBold;
+    color: $accent-color;
+    font-size: 3.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 60px 0;
+  }
+
+  &__text {
+    font-family: OpenSansRegular;
+    text-align: center;
+  }
+}
+
+.amenities {
+  @include row-flex();
+  align-items: flex-start;
+  justify-content: center;
+  padding: 50px 0;
+
+  &__item {
+    @include col();
+    @include col-3();
+    text-align: center;
+  }
+
+  &__divider {
+    @include col();
+    @include col-1();
+    align-self: center;
+    height: 0;
+    border-bottom: 2px solid $primary-color-dark;
+  }
+
+  &__icon {
+    i {
+      font-size: 3.5rem;
+      color: $accent-color;
+      background: $white;
+      padding: 30px;
+      border-radius: 50%;
+    }
+  }
+
+  &__title {
+    font-family: PlayBold;
+    color: $primary-text-color;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 15px 0;
+  }
+
+  &__text {
+    font-family: OpenSansRegular;
+    color: $secondary-text-color;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    //text-align: justify;
+  }
+}

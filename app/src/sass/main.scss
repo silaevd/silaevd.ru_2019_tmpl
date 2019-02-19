@@ -9,10 +9,13 @@ $fa-font-path:   "../font/fontawesome";
 @import 'service/fontawesome/fontawesome';
 @import "service/fontawesome/regular.scss";
 @import "service/fontawesome/solid.scss";
+@import "service/fontawesome/brands.scss";
 
 //Parts
 @import 'parts/header';
 @import 'parts/profile';
+@import 'parts/services';
+@import 'parts/portfolio';
 
 * {
   box-sizing: border-box;
@@ -27,4 +30,12 @@ html {
   max-width: 960px;
   margin: 0 auto;
 }
-
+.boxShadow {
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.1), 0 2px 10px 0 rgba(0,0,0,.07);
+}
+.iconShadow {
+  text-shadow: 0 0 5px rgba(0,0,0, 0.7);
+}
+.textShadow {
+  text-shadow: 0 1px 1px $primary-text-color;
+}

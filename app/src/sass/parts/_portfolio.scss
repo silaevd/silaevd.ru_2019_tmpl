@@ -1,0 +1,82 @@
+.portfolio {
+  padding-bottom: 50px;
+  background: $primary-color-dark url('../img/world.png') no-repeat center;
+  background-size: cover;
+
+  .container {
+    perspective: 1000px;
+  }
+
+  &__topbar {
+    height: 55px;
+    width: 100%;
+    background: $primary-color;
+  }
+
+  &__bracket {
+    color: $white;
+  }
+
+  &__title {
+    font-family: PlayBold;
+    color: $accent-color;
+    font-size: 3.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 60px 0;
+  }
+}
+
+.projects {
+  @include row-flex();
+  transition: 320ms ease-in-out;
+  //transform: rotateX(33deg) rotateZ(-31deg) rotateY(13deg) scale(0.5) translateY(-300px);
+}
+
+.project {
+  @include col();
+  @include col-4();
+  background: $white;
+
+  &__img {
+    line-height: 0;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__body {
+    padding: 15px 15px 45px;
+
+  }
+  &__title {
+    font-family: PlayBold;
+    color: $primary-text-color;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  &__desc {
+    font-family: OpenSansRegular;
+    color: $secondary-text-color;
+    text-align: justify;
+  }
+
+  &__btn {
+    font-family: PlayBold;
+    font-size: 1rem;
+    color: $white;
+    width: 100%;
+    padding: 15px;
+    outline: none;
+    border: none;
+    background: $accent-color;
+    transition: 320ms ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      color: $accent-color;
+      background: #dad8d4;
+    }
+  }
+}

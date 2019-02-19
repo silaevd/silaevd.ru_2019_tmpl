@@ -1,5 +1,5 @@
 .profileIntro {
-  padding: 0 15px;
+  padding: 0 15px 100px;
 
   .flex {
     display: flex;
@@ -22,7 +22,121 @@
 
   &__text {
     font-family: OpenSansRegular;
-    margin-bottom: 50px;
   }
 }
 
+.profile {
+  background: $accent-color url('../img/map_pattern.png') no-repeat center 55px;
+  padding-bottom: 30px;
+
+  &__topbar {
+    height: 55px;
+    width: 100%;
+    position: absolute;
+    background: $primary-color;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  .flex {
+    @include row-flex();
+  }
+}
+
+.person {
+  @include col();
+  @include col-5();
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__pic {
+    width: 215px;
+    height: 215px;
+    border: 10px solid $white;
+    margin-top: -30px;
+    margin-bottom: 30px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    margin-bottom: 15px;
+
+    p {
+      display: flex;
+      justify-content: space-between;
+      font-family: PlayRegular;
+      color: $white;
+      margin-bottom: 10px;
+    }
+
+    .bold {
+      font-family: PlayBold;
+    }
+  }
+
+  &__links {
+
+    a {
+      font-size: 2.5rem;
+      color: $primary-color-light;
+      display: inline-block;
+      will-change: transform;
+      transition: 320ms all ease-out;
+      backface-visibility: hidden;
+      margin: 0 15px;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      i {
+        transition: 320ms all ease-out;
+      }
+    }
+
+    .fa-github {
+      &:hover {
+        color: $black;
+      }
+    }
+    .fa-telegram {
+      &:hover {
+        color: #0088cc;
+      }
+    }
+    .fa-envelope {
+      &:hover {
+        color: #ffcc00;
+      }
+    }
+  }
+}
+
+.about {
+  @include col();
+  @include col-7();
+  font-family: OpenSansRegular;
+  color: $white;
+  margin-top: 80px;
+
+  &__title {
+    font-family: PlayBold;
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    text-align: justify;
+    line-height: 1.1;
+  }
+}
