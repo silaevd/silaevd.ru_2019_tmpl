@@ -47,7 +47,10 @@
     height: 180px;
     width: 20%;
     &:last-child {
-      border-right: 2px solid $primary-color-dark;
+      border-right: 2px solid rgba($primary-color-light, 0.2);
+      &:hover {
+        border-right: none;
+      }
     }
   }
 
@@ -62,11 +65,12 @@
     width: 100%;
     text-decoration: none;
     transition: 320ms all ease-out;
-    border-left: 2px solid $primary-color-dark;
+    border-left: 2px solid rgba($primary-color-light, 0.2);
     border-top: 2px solid transparent;
     &:hover, &_active {
       color: $white;
       border-top: 2px solid $white;
+      border-left: none;
       background: $accent-color;
       box-shadow: 0 0 4px rgba(0, 0, 0, 0.6) inset;
     }
