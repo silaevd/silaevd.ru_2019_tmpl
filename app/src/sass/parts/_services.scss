@@ -73,11 +73,22 @@
   position: relative;
   perspective: 1000px;
   overflow: hidden;
+  display: flex;
 
   &:hover {
     .phone, .tablet, .desktop {
       transform: translateY(-50px) rotateY(-30deg);
     }
+  }
+
+  &__text {
+    font-family: PlayBold;
+    color: $primary-text-color;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: auto;
+    z-index: 5;
   }
 
   .phone, .tablet, .desktop {

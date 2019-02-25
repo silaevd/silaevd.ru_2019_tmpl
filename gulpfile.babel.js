@@ -12,6 +12,7 @@ import buffer from "vinyl-buffer";
 import uglify from "gulp-uglify";
 import sass from "gulp-sass";
 import mincss from "gulp-clean-css";
+import concat from "gulp-concat";
 import sourcemaps from "gulp-sourcemaps";
 import rename from "gulp-rename";
 import imagemin from "gulp-imagemin";
@@ -160,6 +161,15 @@ export const scripts = () => {
     return bundle();
 };
 
+export const libs = () =>
+    src([
+        'node_modules/jquery/dist/jquery.min.js',
+        'node_modules/particlesjs/dist/particles.min.js',
+    ])
+        .pipe(concat('libs.min.js'))
+        .pipe(uglify())
+        .pipe(dest(paths.build.scripts));
+
 export const fonts = () => src(paths.src.font)
     .pipe(dest(paths.build.font));
 
@@ -199,7 +209,7 @@ export const images = () => src(paths.src.images)
     }))
     .on("end", browsersync.reload);
 
-export const development = series(cleanFiles, parallel(html, styles, scripts, fonts, images),
+export const development = series(cleanFiles, parallel(html, styles, scripts, libs, fonts, images),
     parallel(watchCode, server));
 
 export const prod = series(cleanFiles, html, styles, scripts, fonts, images);

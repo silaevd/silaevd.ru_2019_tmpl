@@ -156,7 +156,14 @@
                     <span class="services__bracket textShadow">]</span>
                 </p>
 
-                <p class="services__text">Адаптивная вёрстка лендингов и сайтов для вашего бизнеса</p>
+                <p class="services__text"></p>
+
+                <div class="sample">
+                    <h2 class="sample__text textShadow">Адаптивная вёрстка лендингов и сайтов для вашего бизнеса</h2>
+                    <div class="phone"></div>
+                    <div class="tablet"></div>
+                    <div class="desktop"></div>
+                </div>
 
                 <div class="amenities">
                     <div class="amenities__item">
@@ -188,17 +195,14 @@
                     </div>
                 </div>
 
-                <div class="sample">
-                    <div class="phone"></div>
-                    <div class="tablet"></div>
-                    <div class="desktop"></div>
-                </div>
             </div>
         </section>
         <!--/Services-->
 
         <!--Portfolio-->
-        <section class="portfolio">
+        <section id="portfolio" class="portfolio">
+
+            <div id="particles" class="particles"></div>
 
             <div class="portfolio__topbar"></div>
 
@@ -262,10 +266,69 @@
         </section>
         <!--/Portfolio-->
 
+        <!--Contacts-->
+        <section class="contacts">
+
+            <p class="contacts__title">
+                <span class="portfolio__bracket textShadow">[</span>
+                <span class="textShadow">Контакты</span>
+                <span class="portfolio__bracket textShadow">]</span>
+            </p>
+
+            <div class="container">
+                <div class="flex">
+                    <div class="contactsForm">
+                        <form id="feedback" class="feedback" action="">
+                            <div class="inputBlock">
+                                <input class="boxShadow" type="text" name="name" placeholder="Ваше имя" required>
+                                <p class="inputInfo"></p>
+                            </div>
+                            <div class="inputBlock">
+                                <input class="boxShadow" type="text" name="email" placeholder="Ваша почта" required>
+                                <p class="inputInfo"></p>
+                            </div>
+                            <div class="inputBlock">
+                                <textarea class="boxShadow" name="message" placeholder="Ваше сообщение"></textarea>
+                                <p class="inputInfo"></p>
+                            </div>
+
+                            <button class="contactsForm__submit boxShadow">Отправить</button>
+                        </form>
+                    </div>
+
+                    <div class="contactsInfo">
+                        <p class="contactsInfo__email">
+                            <i class="fas fa-envelope boxShadow"></i>
+                            <a href="mailto:silaevd@yandex.ru">silaevd@yandex.ru</a>
+                        </p>
+                        <p class="contactsInfo__telegram">
+                            <i class="fab fa-telegram boxShadow"></i>
+                            <a href="https://t.me/SilaevD">SilaevD</a>
+                        </p>
+                        <p class="contactsInfo__site">
+                            <i class="fas fa-globe boxShadow"></i>
+                            <a href="https://www.silaevd.ru">www.silaevd.ru</a>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+        <!--/Contacts-->
+
+        <!--Footer-->
+        <footer class="footer">
+
+        </footer>
+        <!--/Footer-->
+
     </div>
     <!--/Wrapper-->
 
-    <script src="js/main.js"></script>
+    <script src="js/libs.min.js" defer></script>
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" ></script>
+    <script src="js/main.js" defer></script>
 
 </body>
 </html>

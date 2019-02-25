@@ -16,6 +16,8 @@ $fa-font-path:   "../font/fontawesome";
 @import 'parts/profile';
 @import 'parts/services';
 @import 'parts/portfolio';
+@import 'parts/contacts';
+@import 'parts/footer';
 
 * {
   box-sizing: border-box;
@@ -25,6 +27,9 @@ html {
   font-size: 16px;
   font-family: sans-serif;
   background: #dad8d4;
+}
+.wrapper {
+  max-width: 1900px;
 }
 .container {
   max-width: 960px;
