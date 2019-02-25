@@ -48,8 +48,10 @@
     "imagemin-pngquant": "^5.0.1",
     "imagemin-svgo": "^7.0.0",
     "imagemin-zopfli": "^6.0.0",
+    "install": "^0.12.2",
     "jquery": "^3.3.1",
-    "particlesjs": "^2.2.3",
+    "npm": "^6.8.0",
+    "particles.js": "^2.0.0",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0",
     "watchify": "^3.11.0",
@@ -66,5 +68,6 @@
         }
       ]
     ]
-  }
+  },
+  "dependencies": {}
 }

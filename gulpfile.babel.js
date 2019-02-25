@@ -163,8 +163,8 @@ export const scripts = () => {
 
 export const libs = () =>
     src([
-        'node_modules/jquery/dist/jquery.min.js',
-        'node_modules/particlesjs/dist/particles.min.js',
+        // 'node_modules/jquery/dist/jquery.min.js',
+        'node_modules/particles.js/particles.js',
     ])
         .pipe(concat('libs.min.js'))
         .pipe(uglify())
