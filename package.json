@@ -52,6 +52,7 @@
     "jquery": "^3.3.1",
     "npm": "^6.8.0",
     "particles.js": "^2.0.0",
+    "scrollmagic": "^2.0.6",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0",
     "watchify": "^3.11.0",

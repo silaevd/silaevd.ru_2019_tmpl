@@ -165,6 +165,7 @@ export const libs = () =>
     src([
         // 'node_modules/jquery/dist/jquery.min.js',
         'node_modules/particles.js/particles.js',
+        'node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js',
     ])
         .pipe(concat('libs.min.js'))
         .pipe(uglify())

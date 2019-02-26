@@ -75,12 +75,6 @@
   overflow: hidden;
   display: flex;
 
-  &:hover {
-    .phone, .tablet, .desktop {
-      transform: translateY(-50px) rotateY(-30deg);
-    }
-  }
-
   &__text {
     font-family: PlayBold;
     color: $primary-text-color;
@@ -126,5 +120,11 @@
     bottom: 0;
     left: 20%;
     transition-delay: 0.6s;
+  }
+
+  &_show {
+    .phone, .tablet, .desktop {
+      transform: translateY(-50px) rotateY(-30deg);
+    }
   }
 }
