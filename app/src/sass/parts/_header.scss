@@ -37,6 +37,7 @@
 .nav {
   background: url('../img/navbar_bg.png') repeat-x center bottom;
   padding: 0 15px;
+
 }
 
 .menu {
@@ -46,6 +47,7 @@
   &__item {
     height: 180px;
     width: 25%;
+    transition: all 220ms ease-in-out;
     &:last-child {
       //border-right: 2px solid rgba($primary-color-light, 0.2);
       &:hover {

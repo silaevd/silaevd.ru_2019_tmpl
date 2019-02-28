@@ -48,6 +48,7 @@
   @include col();
   @include col-4();
   background: $white;
+  opacity: 0;
 
   &__img {
     line-height: 0;

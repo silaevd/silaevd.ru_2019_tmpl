@@ -163,7 +163,7 @@ export const scripts = () => {
 
 export const libs = () =>
     src([
-        // 'node_modules/jquery/dist/jquery.min.js',
+        'node_modules/jquery/dist/jquery.min.js',
         'node_modules/particles.js/particles.js',
         'node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js',
     ])
@@ -213,6 +213,6 @@ export const images = () => src(paths.src.images)
 export const development = series(cleanFiles, parallel(html, styles, scripts, libs, fonts, images),
     parallel(watchCode, server));
 
-export const prod = series(cleanFiles, html, styles, scripts, fonts, images);
+export const prod = series(cleanFiles, html, styles, scripts, libs, fonts, images);
 
 export default development;
